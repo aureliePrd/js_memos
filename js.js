@@ -2,7 +2,7 @@
 //VIEWPORT tablet / mobile dans header php dans des balises <script>
 var vpw = (screen.width>=768)?'1024':'640';
 document.write('<meta name="viewport" content="width='+vpw+'" >');
-
+//
 
 var w = window.innerWidth;
 var h = window.innerHeight;
@@ -426,10 +426,10 @@ Donc ici number renvoie "1" "2" "3" etc...*/
 
 
 //Calculer la hauteur d'un élément via jquery
-$("div").height()); // hauteur de l'élément seul
-$("div").innerHeight()); // inclue padding (pas border et pas margin)
-$("div").outerHeight()); // inclue padding et border (pas margin)
-$("div").outerHeight(true)); // inclue TOUT, les margin aussi !
+$("div").height(); // hauteur de l'élément seul
+$("div").innerHeight(); // inclue padding (pas border et pas margin)
+$("div").outerHeight(); // inclue padding et border (pas margin)
+$("div").outerHeight(true); // inclue TOUT, les margin aussi !
 
 //This method is not applicable to window and document objects; for these, use .height() instead.
 
@@ -447,7 +447,7 @@ window.nomdemafonction = function() {
 
 
 /* Pour eviter de répéter 4 fois la même chose */
-/* GENRE ça :
+/* GENRE ça : */
   $('button#photos').on('click', function () {    
       var scrollTo = $('#pos_photos');      
     $('html, body').animate({scrollTop: scrollTo.offset().top - heightHeader}, 600);                                            
@@ -464,9 +464,9 @@ window.nomdemafonction = function() {
       var scrollTo = $('#pos_historique');      
     $('html, body').animate({scrollTop: scrollTo.offset().top - heightHeader}, 600);                                            
   }); 
-*/   
+  
 
-/* on fait un tableau, on fait un each avec k = iteration (0 1 2 3)  et v = valeur du tableau (photos, video, etc...)
+/* on fait un tableau, on fait un each avec k = iteration (0 1 2 3)  et v = valeur du tableau (photos, video, etc...) */
 
 var heightHeader = $('header #wrapper').height();
 var items = ["photos", "video", "telechargement", "historique" ];
