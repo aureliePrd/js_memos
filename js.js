@@ -93,17 +93,8 @@ console.log(mon_nombre);
 
 
 
-/* Depuis footer, Scroll To Top */
-$("#top").on('click', function(){
-    $("html, body").animate({ scrollTop: 0 }, "slow");   
- });
-
-/*ScrollTo */
-var scrollToTarget = $('.sepMois');
-$('html, body').animate({scrollTop: scrollToTarget.offset().top - 60}, 600);
 
 
-//$('body').scrollTo('#target');
 
 
 
@@ -240,7 +231,7 @@ $('.rechercheHeader')
         .one('click.opensearch', function() {                
             $sIT.stop(true, true).animate({width:'toggle'},600);                
         });            
-};
+
 
 /*
 http://vps134701.ovh.net/jquery-events.html#/6/5
@@ -259,7 +250,18 @@ est possible grâce à la méthode off().
 Lorsque le code se complexifie (par exemple, lors de l'utilisation
 de plugins jQuery), il est conseillé d'utiliser des namespaces 
 afin de faciliter la gestion des événements
-*/
+EXEMPLE :*/
+
+$('button').on('click.nom', function(){
+    alert('Premier évènement');
+});
+
+$('button').on('click.prenom', function(){
+    alert('Second évènement');
+});
+
+$('button').trigger('click.nom'); // exécute le clic, MAIS ne lance que la première alerte !
+
 
 
 /* Boucle FOR */
