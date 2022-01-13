@@ -424,7 +424,11 @@ Donc ici number renvoie "1" "2" "3" etc...*/
 
 
 
+//HASH ANCRE d'un URL
+var ancre = $(this).attr("href").split('#')[1];
 
+// HASH ANCRE de l'url de la page ACTUELLE CURRENT
+var ancre = window.location.hash.substring(1);
 
 
 //Calculer la hauteur d'un élément via jquery
